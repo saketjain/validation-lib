@@ -1,8 +1,13 @@
 
-export default function hello(user = 'World') {
-  return `Hello ${user}!\n`;
-}
+import {
+  ValidateCounterparty,
+  ValidateOurparty,
+  ValidateTrader
+} from './validation';
 
-if (require.main === module) {
-  process.stdout.write(hello());
-}
+const validations = new Map();
+validations.set('ValidateCounterparty', ValidateCounterparty);
+validations.set('ValidateOurparty', ValidateOurparty);
+validations.set('ValidateTrader', ValidateTrader);
+
+export default validations;

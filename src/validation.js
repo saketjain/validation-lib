@@ -3,7 +3,7 @@ export const ValidateCounterparty = (counterparty) => {
         if (counterparty === 'cp1') {
             resolve(true);
         } else {
-            resolve(`{${counterparty} is invalid}`);
+            resolve(`${counterparty} is invalid`);
         }
     });
 }
